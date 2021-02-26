@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <h1>BMI Calculator</h1>
+        
+        <!-- sending the data to a location which is our home route '/'-->
+        <form action="/bmi" method="post">
+            <input type="text" name="num1" placeholder="Weight(lbs)" />
+            <input type="text" name="num2" placeholder="Height(inches)" />
+            <button type="submit" name="submit">Calculate BMI</button>
+        </form>
+    </body>
+</html>
