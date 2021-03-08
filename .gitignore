@@ -3,8 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# Environment files
+# DON'T WANT ON GIT SITES files
 *.env
+*.msi
 
 # User-specific files
 *.rsuser
