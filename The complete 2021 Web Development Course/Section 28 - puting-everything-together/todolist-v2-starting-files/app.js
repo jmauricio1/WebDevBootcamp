@@ -16,6 +16,10 @@ app.use(express.static('public'));
 // app.use(express.json);
 
 const uri = process.env.ATLAS_URI;
+let port = process.env.PORT;
+if(port == null || port ==""){
+  port = 3000;
+}
 
 mongoose.connect(uri, 
   {
@@ -220,6 +224,6 @@ app.get('/:listName', (req, res) => {
   });
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port: 3000");
+app.listen(port, function() {
+  console.log("Server started on port successfully.");
 });
