@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
+const encrypt = require('mongoose-encryption');
 const ejs = require('ejs');
 require('dotenv').config();
 
@@ -24,11 +25,18 @@ connection.once('open', () => {
     console.log('secretsDB connection established successfully');
 });
 
+const secret = process.env.OMG;
+
 const userSchema = new mongoose.Schema({
     email: String,
     password: String
 });
 
+//We are currently only going to encrypt the password using the key from .env
+userSchema.plugin(encrypt, {
+        secret: secret, 
+        encryptedFields: ['password']
+    });
 const User = mongoose.model('user', userSchema);
 
 app.get('/', (req, res) => {
