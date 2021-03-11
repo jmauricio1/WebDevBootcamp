@@ -50,7 +50,8 @@ const secret = process.env.OMG;
 const userSchema = new mongoose.Schema({
   email: String,
   password: String,
-  googleId: String
+  googleId: String,
+  secret: String,
 });
 
 //This is used to salt and hash our passwords, and to save users into mongodb
@@ -72,13 +73,13 @@ passport.use(User.createStrategy());
 // passport.serializeUser(User.serializeUser());
 // passport.deserializeUser(User.deserializeUser());
 passport.serializeUser((user, done) => {
-    done(null, user.id);
+  done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user) => {
-        done(err, user);
-    });
+  User.findById(id, (err, user) => {
+    done(err, user);
+  });
 });
 
 passport.use(
@@ -90,7 +91,7 @@ passport.use(
       uerProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     function (accessToken, refreshToken, profile, cb) {
-        console.log(profile);
+      console.log(profile);
 
       User.findOrCreate({ googleId: profile.id }, function (err, user) {
         return cb(err, user);
@@ -188,11 +189,20 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/secrets", (req, res) => {
-  if (req.isAuthenticated()) {
-    res.render("secrets");
-  } else {
-    res.render("login");
-  }
+  //   if (req.isAuthenticated()) {
+  //     res.render("secrets");
+  //   } else {
+  //     res.redirect("login");
+  //   }
+  User.find({ secret: { $ne: null } }, (err, foundUsers) => {
+    if (err) {
+      console.log(err);
+    } else {
+      if (foundUsers) {
+        res.render("secrets", { usersWithSecrets: foundUsers });
+      }
+    }
+  });
 });
 
 app.post("/register", (req, res) => {
@@ -260,6 +270,34 @@ app.post("/register", (req, res) => {
 app.get("/logout", (req, res) => {
   req.logOut();
   res.redirect("/");
+});
+
+app.get("/submit", (req, res) => {
+  if (req.isAuthenticated()) {
+    res.render("submit");
+  } else {
+    res.redirect("login");
+  }
+});
+
+app.post("/submit", (req, res) => {
+  const submittedSecret = req.body.secret;
+
+  //See user credentials
+  //console.log(req.user);
+
+  User.findById(req.user.id, (err, foundUser) => {
+    if (err) {
+      console.log(err);
+    } else {
+      if (foundUser) {
+        foundUser.secret = submittedSecret;
+        foundUser.save(() => {
+          res.redirect("/secrets");
+        });
+      }
+    }
+  });
 });
 
 app.listen(3000, () => {
