@@ -5,6 +5,7 @@ function Card(props) {
   return (
     <div className="card">
       <div className="top">
+        <p>{props.index}</p>
         <h2 className="name">{props.name}</h2>
         <img className="circle-img" src={props.source}></img>
       </div>
