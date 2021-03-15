@@ -1,21 +1,15 @@
 import React, { useState } from "react";
 import ToDoItem from "./todo-item";
+import InputArea from './input-area';
 import "../toDo.css";
 
 function ToDoList() {
-  const [itemName, setItemName] = useState("");
   const [itemArray, setItemArray] = useState([]);
 
-  function handleChange(e) {
-    //console.log(e.target.value);
-    setItemName(e.target.value);
-  }
-
-  function handleClick() {
+  function handleClick(itemName) {
     setItemArray((previousItems) => {
       return [...previousItems, itemName];
     });
-    setItemName("");
   }
 
   function deleteItem(id) {
@@ -33,15 +27,7 @@ function ToDoList() {
         <h1>To-Do List</h1>
       </div>
       <div className="form">
-        <input
-          type="text"
-          name="listItem"
-          onChange={handleChange}
-          value={itemName}
-        />
-        <button onClick={handleClick}>
-          <span>Add</span>
-        </button>
+        <InputArea onClick={handleClick}/>
       </div>
       <div>
         <ul>
