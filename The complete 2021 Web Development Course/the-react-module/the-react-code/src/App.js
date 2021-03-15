@@ -5,6 +5,7 @@ import MathUse from "./components/math-use";
 import Card from "./components/card";
 import StateHook from './components/stateHooks';
 
+import CarsPage from  './components/cars-page';
 import contacts from "./contacts";
 
 // function createCard(contact) {
@@ -14,7 +15,7 @@ import contacts from "./contacts";
 function App() {
   // return <div className="App">{contacts.map(createCard)}</div>;
   return <div className="App">
-    <StateHook/>
+    <CarsPage />
   </div>
 }
 

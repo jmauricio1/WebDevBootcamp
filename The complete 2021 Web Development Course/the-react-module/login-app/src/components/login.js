@@ -2,6 +2,7 @@ import React from "react";
 import Input from "./input";
 
 function Login(props) {
+
   return (
     <form className="form">
       <Input type="text" placeholder="Username" />
