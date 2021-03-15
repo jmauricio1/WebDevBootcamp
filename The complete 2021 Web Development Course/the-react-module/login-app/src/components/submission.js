@@ -6,7 +6,7 @@ function Submission() {
   const [name, setName] = useState("...!");
   const [otherText, setOtherText] = useState("");
 
-  let inputValue = "";
+  //let inputValue = "";
 
   function handleClick() {
     setHeadingText("Submitted");
