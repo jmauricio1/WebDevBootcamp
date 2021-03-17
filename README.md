@@ -1,5 +1,11 @@
 # Some things to remember from this course
 
+## **REMEMBER THIS**
+> "I think most people can learn a lot more than they think they can. They sell themselves short without trying. One bit of advice: it is important to view knowledge as sort of a semantic tree — make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to."
+> Don't be too ambitious at first.
+> It's not shameful to google things.
+> You don't have to reinvent the wheel. Some wheels were made for you to do great things it.
+
 ## Web Design 
 - People recognize design more than functionality
 - 3 seconds to make a good impression"
@@ -40,3 +46,13 @@
 
 >"Good design is helping people do what they want to do"
 
+## HTML & CSS
+- meta tags make things available for search engines to find and use to display
+- `position: absolute;` is relative to its parents; can cause unnatural flow of elements/page
+- `position: relative;` is relative to the current position (where it should have been)
+- `margin: auto;` is good for centering things if `text-align: center;` is not being used
+- use web-safe fonts (but really, no font is 100% web-safe)
+- em: width of the capital letter 'M'
+    - **16px = 100% = 1em**
+- rem: ignore parents em and just set it to a absolute em
+- dynamic `font-size` = better accessibility
