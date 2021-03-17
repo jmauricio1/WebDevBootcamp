@@ -1,6 +1,6 @@
 # Some things to remember from this course
 
-## Section 8: Web Design 
+## Web Design 
 - People recognize design more than functionality
 - 3 seconds to make a good impression"
 - 4 Pillars of Good Web Design
@@ -9,16 +9,34 @@
     - UI Design
     - UX Design
 
-### Color Theory
+#### Color Theory
 - mood: predominant color (different colors bring different feelings)
 - Analogous Color Patterns: not good at standing out
 - Complimentary palettes: make things pop
 
-### Typography
+#### Typography
 - Most developers use two fonts in one design that portray similar moods
 
-### UI Design
+#### UI Design
 - Size/Height = Heirarchy
 - Accent Tones: things you want people to pay attention to
 - Optimal line length: 40 to 60 characters per line
 - Alignment: consistency is key and try to reduce the number of alignment points
+
+#### UX Design
+- meant to be invisible
+- make this effortless for the user
+- Keep things simple
+- "F" reading pattern
+- "Z" reading pattern
+- Think about all platform design (desktop and mobile)
+- **Get rid of banners and warnings** (They make things cluttered)
+
+#### Whitespace
+- make things look expensive and elevated
+
+#### Audience
+- pay attention to your audience and think of what they would want
+
+>"Good design is helping people do what they want to do"
+
