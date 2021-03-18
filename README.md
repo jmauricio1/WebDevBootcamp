@@ -3,7 +3,7 @@
 ## **REMEMBER THIS**
 > "I think most people can learn a lot more than they think they can. They sell themselves short without trying. 
 >
->One bit of advice: it is important to view knowledge as sort of a semantic tree — make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to."
+>One bit of advice: it is important to view knowledge as sort of a semantic tree — make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to." - Elon Musk
 
 > Don't be too ambitious at first.
 
