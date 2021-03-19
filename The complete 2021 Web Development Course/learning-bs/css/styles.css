@@ -18,6 +18,10 @@ h3{
     color: white;
 }
 
+#features p, #footer p{
+    color: #8f8f8f;
+}
+
 #title {
     background-color: #ff4c68;
     padding-bottom: 7%;
@@ -56,7 +60,7 @@ h3{
     font-weight: 300;
 }
 
-.header-buttons{
+.download-buttons{
     margin: 5% 3% 3% 0;
 }
 
@@ -103,9 +107,6 @@ h3{
     color: #ff4c68;
 }
 
-#features p{
-    color: #8f8f8f;
-}
 
 #testimonials{
     background-color:#ef8172;
@@ -123,6 +124,10 @@ h3{
     width: 15%;
 }
 
+#testimonials .carousel-item{
+    padding: 7% 15%;
+}
+
 #press{
     background-color: #ef8172;
     text-align: center;
@@ -132,10 +137,6 @@ h3{
 #press img{
     width: 15%;
     margin: 20px 20px 50px;
-}
-
-#testimonials .carousel-item{
-    padding: 7% 15%;
 }
 
 /* Pricing Section */
@@ -163,10 +164,6 @@ h3{
     font-size: 3.0rem;
 }
 
-#cta button{
-    margin: 3% 3% 3% 0;
-}
-
 /* Footer Section */
 
 footer{
@@ -174,15 +171,7 @@ footer{
     margin: 4% 0;
 }
 
-footer .fab{
+.social-icon{
     font-size: 1rem;
-    padding: 0 20px 20px 0;
-}
-
-footer .fas{
-    font-size: 1rem;
-}
-
-footer p{
-    color: #8f8f8f;
+    padding: 20px 20px 20px 20px;
 }
