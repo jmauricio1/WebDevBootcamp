@@ -13,6 +13,7 @@ h1 {
 #title {
     background-color: #ff4c68;
     color: white;
+    padding-bottom: 7%;
 }
 
 #title a{
@@ -24,8 +25,10 @@ h1 {
 }
 
 #header-dog{
-    width: 60%;
+    width: 50%;
     transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
 }
 
 .navbar-brand{
@@ -51,9 +54,32 @@ h1 {
     margin: 5% 3% 3% 0;
 }
 
+.navbar-toggler{
+    border-color: white;
+    border-width: 2px;
+}
+
+.fa-bars{
+    color: white;
+}
+
+@media (max-width: 991px){
+    #title{
+        text-align: center;
+    }
+
+    #header-dog{
+        position: static;
+        transform: rotate(0);
+    }
+}
+
 #features{
     text-align: center;
     padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .feature-box{
@@ -119,4 +145,38 @@ h1 {
 
 .card{
     margin-bottom: 2rem;
+}
+
+#cta{
+    text-align: center;
+    background-color: #ff4c68;
+    color: white;
+    padding: 3% 15%;
+}
+
+#cta h3{
+    font-weight: 900;
+    font-size: 3.0rem;
+}
+
+#cta button{
+    margin: 3% 3% 3% 0;
+}
+
+footer{
+    text-align: center;
+    margin: 4% 0;
+}
+
+footer .fab{
+    font-size: 1rem;
+    padding: 0 20px 20px 0;
+}
+
+footer .fas{
+    font-size: 1rem;
+}
+
+footer p{
+    color: #8f8f8f;
 }
