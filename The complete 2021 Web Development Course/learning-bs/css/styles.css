@@ -1,18 +1,25 @@
-body{
+body, h1, .navlink, h2{
     font-family: "Montserrat";
     font-weight: 400;
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
   font-size: 3.5rem;
   line-height: 1.5;
   font-weight: 900;
 }
 
+h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.text-color-white{
+    color: white;
+}
+
 #title {
     background-color: #ff4c68;
-    color: white;
     padding-bottom: 7%;
 }
 
@@ -46,7 +53,6 @@ h1 {
 }
 
 .nav-link{
-    font-family: "Montserrat";
     font-weight: 300;
 }
 
@@ -97,11 +103,6 @@ h1 {
     color: #ff4c68;
 }
 
-#features h3{
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
 #features p{
     color: #8f8f8f;
 }
@@ -113,7 +114,6 @@ h1 {
 }
 
 #testimonials h2{
-    font-family: "Montserrat";
     font-weight: bold;
     font-size: 3rem;
 }
@@ -138,6 +138,8 @@ h1 {
     padding: 7% 15%;
 }
 
+/* Pricing Section */
+
 #pricing{
     text-align: center;
     padding: 100px;
@@ -146,6 +148,8 @@ h1 {
 .card{
     margin-bottom: 2rem;
 }
+
+/* Contact Section */
 
 #cta{
     text-align: center;
@@ -162,6 +166,8 @@ h1 {
 #cta button{
     margin: 3% 3% 3% 0;
 }
+
+/* Footer Section */
 
 footer{
     text-align: center;
