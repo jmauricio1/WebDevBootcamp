@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 5em;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+section{
+    height: 100%;
+}
+
+#s2{
+    height: 50vh;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: middle;
+    place-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+span{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: black;
+    border-radius: 50%;
+}
+
+.thing{
+    height: 100vh;
+    width: 97vw;
+    background-color: cadetblue;
+    position: relative;
+    z-index: 1;
+}
